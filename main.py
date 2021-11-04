@@ -3,7 +3,7 @@ import psycopg2
 
 DB_HOST = '127.0.0.1'
 DB_NAME = 'test'
-DB_USER = 'postgres'
+DB_USER = config('name')
 SECRET_KEY = config('pass')
 
 conn = psycopg2.connect(dbname=DB_NAME, user= DB_USER, password = SECRET_KEY, host=DB_HOST)
